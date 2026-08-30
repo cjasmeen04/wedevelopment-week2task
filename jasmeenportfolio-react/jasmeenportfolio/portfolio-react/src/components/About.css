@@ -27,10 +27,9 @@
 
 .about-text p {
   margin-bottom: 15px;
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-size: 15px;
   line-height: 1.8;
-  opacity: 0.9;
 }
 
 /* About Info Cards */
@@ -64,10 +63,9 @@
 }
 
 .info-item span {
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-size: 15px;
   display: block;
-  opacity: 0.85;
 }
 
 .info-item:hover {

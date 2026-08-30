@@ -19,12 +19,11 @@
 }
 
 .contact > p {
-  color: var(--text-primary);
+  color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto 35px;
   font-size: 15px;
   line-height: 1.7;
-  opacity: 0.85;
 }
 
 /* Contact Form */

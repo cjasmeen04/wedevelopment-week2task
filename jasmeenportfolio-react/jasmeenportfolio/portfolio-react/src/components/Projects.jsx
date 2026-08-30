@@ -13,18 +13,18 @@ function Projects() {
       description:
         'A full-stack e-commerce application with product catalog, shopping cart and checkout functionality built using React and MongoDB.',
       technologies: 'React • Node.js • MongoDB • Express',
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/cjasmeen04/velora-ai---e-commerce',
+      demo: 'https://velora-ai-e-commerce.vercel.app/login',
     },
     {
       number: '02',
-      type: 'FRONTEND PROJECT',
-      title: 'Weather App',
+      type: 'Online food-ordering ',
+      title: '',
       description:
-        'A responsive weather application that fetches real-time weather data using weather APIs and displays it beautifully.',
+        'Developed a responsive food delivery website using HTML, CSS, and JavaScript. Implemented menu browsing, food categories, shopping cart, payment, and order tracking features with a user-friendly interface.',
       technologies: 'HTML • CSS • JavaScript',
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/cjasmeen04/Food-delivery-website',
+      demo: 'https://verdant-blini-5d4d67.netlify.app/',
     },
     {
       number: '03',
@@ -33,7 +33,7 @@ function Projects() {
       description:
         'A feature-rich task manager with real-time updates, local storage persistence, and an intuitive user interface.',
       technologies: 'React • JavaScript • CSS',
-      github: '#',
+      github: 'https://github.com/cjasmeen04/TODO',
       demo: '#',
     },
   ];

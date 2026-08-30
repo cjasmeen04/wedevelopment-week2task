@@ -36,9 +36,9 @@ html {
 .dark-mode {
   --bg-primary: #0F1419;
   --bg-secondary: #1A1F2E;
-  --text-primary: #F7FAFC;
-  --text-secondary: #CBD5E0;
-  --text-light: #A0AEC0;
+  --text-primary: #193e57;
+  --text-secondary: #7e7732;
+  --text-light: #2a3b51;
   --accent-color: #F59E0B;
   --accent-hover: #D97706;
   --accent-light: #78350F;

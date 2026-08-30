@@ -67,15 +67,22 @@ function About() {
           </h2>
 
           <p>
-            I am a Computer Science Engineering graduate with a strong interest in Web Development. My learning journey started with HTML and CSS and gradually expanded into JavaScript, React.js and backend development.
+            I am a Computer Science Engineering graduate with a strong interest
+            in Web Development. My learning journey started with HTML and CSS
+            and gradually expanded into JavaScript, React.js and backend
+            development.
           </p>
 
           <p>
-            Currently, I am strengthening my understanding of the MERN stack and working on practical projects to understand how frontend, backend and databases work together.
+            Currently, I am strengthening my understanding of the MERN stack
+            and working on practical projects to understand how frontend,
+            backend and databases work together.
           </p>
 
           <p>
-            I believe that consistent practice, building projects and learning from mistakes are some of the best ways to become a better developer.
+            I believe that consistent practice, building projects and learning
+            from mistakes are some of the best ways to become a better
+            developer.
           </p>
         </motion.div>
 
