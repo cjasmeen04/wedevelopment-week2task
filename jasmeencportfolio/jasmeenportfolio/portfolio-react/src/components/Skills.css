@@ -1,0 +1,105 @@
+/* ===================================
+   SKILLS SECTION STYLES
+   =================================== */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+/* Skill Card */
+.skill-card {
+  background-color: var(--bg-secondary);
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  box-shadow: var(--card-shadow);
+  border-color: var(--accent-color);
+}
+
+/* Skill Icon */
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-light);
+  color: var(--accent-color);
+  border-radius: 12px;
+  margin-bottom: 18px;
+  transition: all var(--transition);
+}
+
+.skill-icon svg {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+}
+
+.skill-card:hover .skill-icon {
+  background-color: var(--accent-color);
+  color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+/* Skill Title */
+.skill-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+/* Skill Description */
+.skill-card p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .skill-card {
+    padding: 20px;
+  }
+
+  .skill-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .skill-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .skill-card h3 {
+    font-size: 16px;
+  }
+
+  .skill-card p {
+    font-size: 13px;
+  }
+}

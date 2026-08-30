@@ -1,0 +1,206 @@
+/* ===================================
+   GLOBAL STYLES & CSS VARIABLES
+   =================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Import professional font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* LIGHT MODE (Default) */
+.light-mode {
+  --bg-primary: #F5F7FB;
+  --bg-secondary: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --text-light: #94A3B8;
+  --accent-color: #D97706;
+  --accent-hover: #B45309;
+  --accent-light: #FEF3C7;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --card-border: #E2E8F0;
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --footer-bg: #0F172A;
+  --transition: 0.3s ease;
+}
+
+/* DARK MODE */
+.dark-mode {
+  --bg-primary: #0F1419;
+  --bg-secondary: #1A1F2E;
+  --text-primary: #F7FAFC;
+  --text-secondary: #CBD5E0;
+  --text-light: #A0AEC0;
+  --accent-color: #F59E0B;
+  --accent-hover: #D97706;
+  --accent-light: #78350F;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --card-border: #2D3748;
+  --navbar-bg: rgba(15, 20, 25, 0.95);
+  --footer-bg: #0A0E13;
+  --transition: 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+main {
+  min-height: 100vh;
+}
+
+/* Heading typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+/* ===================================
+   GENERAL SECTION STYLES
+   =================================== */
+
+section {
+  scroll-margin-top: 80px;
+}
+
+.section {
+  width: 86%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-heading small {
+  color: var(--accent-color);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  font-size: 38px;
+  margin-top: 0;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.section-heading p {
+  max-width: 600px;
+  margin: 15px auto 0;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ===================================
+   BUTTON STYLES
+   =================================== */
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.primary-btn {
+  background: var(--accent-color);
+  color: #FFFFFF;
+}
+
+.primary-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(217, 119, 6, 0.25);
+}
+
+.secondary-btn {
+  border: 1.5px solid var(--accent-color);
+  color: var(--accent-color);
+  background: transparent;
+}
+
+.secondary-btn:hover {
+  background: var(--accent-light);
+  color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .section-heading p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    width: 90%;
+    padding: 50px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 24px;
+  }
+
+  .section-heading small {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .section-heading p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}

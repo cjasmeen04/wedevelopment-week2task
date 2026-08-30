@@ -1,0 +1,155 @@
+/* ===================================
+   PROJECTS SECTION STYLES
+   =================================== */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Project Card */
+.project {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 30px;
+  border-radius: 12px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition);
+  border: 1px solid var(--card-border);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.project:hover {
+  border-color: var(--accent-color);
+  box-shadow: var(--card-shadow);
+}
+
+/* Project Number */
+.project-number {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Project Type */
+.project-type {
+  color: var(--accent-color);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Project Title */
+.project h3 {
+  margin: 12px 0 15px 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+/* Project Description */
+.project p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* Project Technologies */
+.project-tech {
+  margin-top: 20px;
+  color: var(--accent-color);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Project Links */
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--accent-color);
+  border-radius: 8px;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.project-link:hover {
+  background-color: var(--accent-color);
+  color: #FFFFFF;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 900px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .project {
+    padding: 25px;
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .project {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .project h3 {
+    font-size: 18px;
+  }
+
+  .project p {
+    font-size: 13px;
+  }
+
+  .project-tech {
+    font-size: 11px;
+    margin-top: 15px;
+  }
+
+  .project::before {
+    width: 150px;
+    height: 150px;
+  }
+}

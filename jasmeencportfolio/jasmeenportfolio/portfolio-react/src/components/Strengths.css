@@ -1,0 +1,117 @@
+/* ===================================
+   STRENGTHS SECTION STYLES
+   =================================== */
+
+.strengths {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* Strength Card */
+.strength {
+  text-align: center;
+  background-color: var(--bg-secondary);
+  padding: 25px 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--card-border);
+  transition: all 0.3s ease;
+}
+
+.strength:hover {
+  box-shadow: var(--card-shadow);
+  border-color: var(--accent-color);
+}
+
+/* Strength Icon */
+.strength-icon {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(169, 196, 181, 0.15);
+  border-radius: 12px;
+  color: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.strength-icon svg {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.strength:hover .strength-icon {
+  background-color: var(--accent-color);
+  color: #102018;
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Strength Title */
+.strength h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 8px;
+  color: var(--text-primary);
+}
+
+/* Strength Description */
+.strength p {
+  color: var(--text-light);
+  font-size: 12px;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 900px) {
+  .strengths {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .strengths {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .strength {
+    padding: 20px 12px;
+  }
+
+  .strength-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .strength-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .strength h3 {
+    font-size: 14px;
+  }
+
+  .strength p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 400px) {
+  .strengths {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,132 @@
+/* ===================================
+   JOURNEY SECTION STYLES
+   =================================== */
+
+.journey {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.journey-item {
+  position: relative;
+  padding: 20px 0 35px 40px;
+  border-left: 2px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.journey-item:last-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+/* Timeline Dot */
+.journey-item::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 0 3px var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.journey-item:hover::before {
+  width: 24px;
+  height: 24px;
+  left: -13px;
+  box-shadow: 0 0 15px rgba(169, 196, 181, 0.5);
+}
+
+/* Year Badge */
+.journey-year {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+/* Title */
+.journey-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+/* Description */
+.journey-item p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.journey-item:hover {
+  background-color: rgba(169, 196, 181, 0.03);
+  padding-left: 45px;
+  border-radius: 8px;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 900px) {
+  .journey-item {
+    padding: 15px 0 30px 35px;
+  }
+
+  .journey-item h3 {
+    font-size: 18px;
+  }
+
+  .journey-item p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .journey {
+    padding: 0 10px;
+  }
+
+  .journey-item {
+    padding: 12px 0 25px 30px;
+    border-left-width: 1.5px;
+  }
+
+  .journey-item::before {
+    width: 14px;
+    height: 14px;
+    left: -9px;
+    box-shadow: none;
+  }
+
+  .journey-item:hover::before {
+    width: 14px;
+    height: 14px;
+    left: -9px;
+  }
+
+  .journey-year {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .journey-item h3 {
+    font-size: 16px;
+  }
+
+  .journey-item p {
+    font-size: 13px;
+  }
+
+  .journey-item:hover {
+    padding-left: 30px;
+  }
+}

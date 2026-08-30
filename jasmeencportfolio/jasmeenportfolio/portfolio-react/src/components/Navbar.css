@@ -1,0 +1,205 @@
+/* ===================================
+   NAVBAR STYLES
+   =================================== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--navbar-bg);
+  border-bottom: 1px solid var(--card-border);
+  transition: all var(--transition);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+}
+
+.logo span {
+  color: var(--accent-color);
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Underline animation on hover */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+}
+
+.dark-mode-toggle:hover {
+  background-color: var(--card-border);
+  color: var(--accent-color);
+}
+
+/* Mobile Menu Toggle (Hidden by default) */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--text-primary);
+  transition: all var(--transition);
+}
+
+.mobile-menu-toggle:hover {
+  color: var(--accent-color);
+}
+
+/* Dark Toggle for Mobile Menu */
+.dark-toggle-mobile {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: all var(--transition);
+  padding: 8px;
+}
+
+.dark-toggle-mobile:hover {
+  color: var(--accent-color);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN (Mobile)
+   =================================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  /* Show mobile menu toggle */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  /* Navigation Links - Hidden by default on mobile */
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--bg-secondary);
+    gap: 15px;
+    padding: 20px;
+    border-bottom: 1px solid var(--card-border);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  /* Show menu when active */
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-links a:hover {
+    padding-left: 15px;
+  }
+
+  /* Show dark toggle in mobile menu */
+  .dark-toggle-mobile {
+    display: block;
+    align-self: flex-start;
+  }
+
+  /* Hide desktop dark toggle on mobile */
+  .dark-mode-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 12px 4%;
+  }
+
+  .logo {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .nav-links {
+    top: 50px;
+    padding: 15px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+}
